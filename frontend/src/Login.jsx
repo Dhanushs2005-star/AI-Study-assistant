@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import axios from "axios";
 import { useState } from "react";
+import GoogleLoginButton from "./components/GoogleLoginButton";
 
 function Login({ onNavigate }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -340,32 +341,7 @@ function Login({ onNavigate }) {
 
 
             {/* GOOGLE BUTTON */}
-            <button
-              className="
-                flex w-full
-                items-center justify-center gap-3
-                rounded-2xl
-                border border-gray-200
-                bg-white
-                py-3.5
-                text-[15px]
-                font-medium
-                text-gray-800
-                transition-all duration-300
-                hover:-translate-y-0.5
-                hover:border-gray-400
-                hover:bg-gray-50
-                hover:shadow-sm
-              "
-            >
-
-              <span className="text-base font-bold">
-                G
-              </span>
-
-              Continue with Google
-
-            </button>
+           <GoogleLoginButton onNavigate={onNavigate} />
 
 
             {/* REGISTER */}

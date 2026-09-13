@@ -13,6 +13,7 @@ import {
   BookOpen,
   ShieldCheck,
 } from "lucide-react";
+import GoogleLoginButton from "./components/GoogleLoginButton";
 
 function CreateAccount({ onNavigate }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -339,14 +340,7 @@ function CreateAccount({ onNavigate }) {
               </div>
 
               {/* GOOGLE BUTTON */}
-              <button
-                type="button"
-                onClick={() => onNavigate?.("dashboard")}
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white py-2.5 text-sm font-medium text-gray-800 transition-all hover:bg-gray-50 hover:border-gray-400"
-              >
-                <span className="font-bold">G</span>
-                Continue with Google
-              </button>
+             <GoogleLoginButton onNavigate={onNavigate} />
             </form>
 
             <p className="mt-5 text-center text-xs text-gray-500">
